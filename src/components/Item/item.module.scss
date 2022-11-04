@@ -1,0 +1,43 @@
+.item {
+  display: flex;
+  align-items: center;
+
+  width: 150px;
+  height: 25px;
+
+  font-size: var(--FS14);
+  font-weight: var(--SemiBold);
+  color: var(--White);
+
+  padding: 2px 15px;
+
+  border-radius: 4px;
+  border: 1px solid var(--Black30);
+  background-color: var(--Black30);
+
+  transition: 0.4s;
+
+  &__custom {
+    width: 130px;
+
+    font-family: "Stick No Bills", sans-serif;
+    font-size: var(--FS18);
+    font-weight: var(--Regular);
+
+    justify-content: center;
+  }
+
+  &.actived {
+    background-color: var(--Black60);
+    border: 1px solid var(--Black30);
+    margin-left: 15px;
+  }
+
+  @media (min-width: 800px) {
+    width: 230px;
+    height: 35px;
+
+    font-size: var(--FS18);
+    justify-content: center;
+  }
+}

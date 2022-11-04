@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+  gap: 10px;
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 4px;
+
+    background-color: var(--Black30);
+    border: 1px solid var(--Black30);
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (min-width: 800px) {
+      width: 45px;
+      height: 45px;
+
+      font-size: var(--FS18);
+      justify-content: center;
+
+      svg {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+}
