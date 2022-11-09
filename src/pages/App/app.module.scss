@@ -2,7 +2,20 @@
   width: 100%;
   height: 100%;
 
+  transition: 0.4s;
+}
+
+.pomodoro {
   background-color: var(--Primary);
+}
+.shortBreak {
+  background-color: var(--Secondary);
+}
+.longBreak {
+  background-color: var(--Tertiary);
+}
+.config {
+  background-color: var(--Quaternary);
 }
 
 .main,

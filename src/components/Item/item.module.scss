@@ -30,7 +30,10 @@
   &.actived {
     background-color: var(--Black60);
     border: 1px solid var(--Black30);
-    margin-left: 15px;
+
+    @media (max-width: 800px) {
+      transform: translateX(15px);
+    }
   }
 
   @media (min-width: 800px) {

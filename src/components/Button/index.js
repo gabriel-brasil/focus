@@ -1,7 +1,11 @@
 import styles from "./button.module.scss";
 
-function Button({ children }) {
-  return <button className={styles.button}>{children}</button>;
+function Button({ children, ...props }) {
+  return (
+    <button className={styles.button} {...props}>
+      {children}
+    </button>
+  );
 }
 
 export default Button;
