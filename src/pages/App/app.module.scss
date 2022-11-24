@@ -67,6 +67,21 @@
 }
 
 .options {
+  .user {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+
+    margin-top: 15px;
+
+    video {
+      width: 200px;
+      height: 150px;
+      border-radius: 4px;
+      background-color: #333;
+    }
+  }
   .nav {
     @media (min-width: 800px) {
       justify-content: center;

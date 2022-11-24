@@ -15,13 +15,31 @@ export const atomActivedItem = atom({
   default: "pomodoro",
 });
 
+const getLocalStorage = JSON.parse(localStorage.getItem("focus_customTimers"));
+
+let timer = {};
+
+if (getLocalStorage && getLocalStorage.pomodoro !== "00:00:00") {
+  timer.pomodoro = getLocalStorage.pomodoro;
+} else {
+  timer.pomodoro = "00:25:00";
+}
+
+if (getLocalStorage && getLocalStorage.shortBreak !== "00:00:00") {
+  timer.shortBreak = getLocalStorage.shortBreak;
+} else {
+  timer.shortBreak = "00:05:00";
+}
+
+if (getLocalStorage && getLocalStorage.longBreak !== "00:00:00") {
+  timer.longBreak = getLocalStorage.longBreak;
+} else {
+  timer.longBreak = "00:15:00";
+}
+
 export const atomTimer = atom({
   key: "atomTimer",
-  default: {
-    pomodoro: 1500,
-    shortBreak: 300,
-    longBreak: 900,
-  },
+  default: timer,
 });
 
 export const atomCountdownActived = atom({
